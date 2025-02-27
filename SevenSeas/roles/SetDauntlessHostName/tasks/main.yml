@@ -1,8 +1,8 @@
-    - name: Change Host name      #ansible-galaxy collection install ansible.windows
-      ansible.windows.win_hostname:
-        name: Dauntless
-      register: res 
+- name: Change Host name      #ansible-galaxy collection install ansible.windows
+  ansible.windows.win_hostname:
+    name: Dauntless
+  register: res 
 
-    - name: Reboot
-      ansible.windows.win_reboot:
-      when: res.reboot_required
+- name: Reboot
+  ansible.windows.win_reboot:
+  when: res.reboot_required
