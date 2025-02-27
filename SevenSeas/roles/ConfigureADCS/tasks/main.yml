@@ -1,0 +1,21 @@
+- name: Install Active Directory Certificate Services
+  ansible.windows.win_feature:
+    name: 
+      - AD-Certificate
+      - ADCS-Cert-Authority
+    include_management_tools: yes
+    state: present
+
+- name: Configure Active Directory Certificate Authority
+  ansible.windows.win_powershell:
+    script: |
+      Install-AdcsCertificationAuthority -CAType EnterpriseRootCa -CryptoProviderName "RSA#Microsoft Software Key Storage Provider" `
+        -KeyLength 2048 -HashAlgorithmName SHA1 -ValidityPeriod Years -ValidityPeriodUnits 99 -WarningAction SilentlyContinue -Force
+
+- name: Install Remote System Administration Tools (RSAT)
+  ansible.windows.win_feature:
+    name:
+      - RSAT-AD-Tools
+      - RSAT-ADCS
+      - RSAT-ADCS-Mgmt
+    state: present
