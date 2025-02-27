@@ -5,7 +5,7 @@
   - role: NukeDefender
   - role: Remove_All_Updates
   - role: SetPortRoyalHostName
-  - role: UpgradeToDC
+  - role: PromoteToDC
   - role: ConfigureADCS
   - role: SetTimeZone
 
