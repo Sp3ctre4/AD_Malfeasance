@@ -1,0 +1,39 @@
+- name: Install Active Directory Domain Services (ADDS)
+  ansible.windows.win_feature:
+    name: AD-Domain-Services
+    include_management_tools: yes
+    state: present
+#ansible-galaxy collection install community.windows
+
+- name: Import ActiveDirectory module
+  community.windows.win_psmodule:
+    name: ActiveDirectory
+    state: present
+
+#ansible-galaxy collection install microsoft.ad
+- name: Install ADDS Domain
+  microsoft.ad.domain:
+    dns_domain_name: sevenseas.local
+    safe_mode_password: NoPiratesAllowed!
+    domain_mode: "WinThreshold"
+    forest_mode: "WinThreshold"
+    install_dns: true
+    reboot: true
+  register: isDC
+
+- name: Deploy Active Directory Domain Forest
+  microsoft.ad.domain_controller:
+    dns_domain_name: sevenseas.local
+    domain_admin_user: Administrator@sevenseas.local
+    domain_admin_password: NoPiratesAllowed!
+    safe_mode_password: NoPiratesAllowed!
+    state: domain_controller
+
+- name: Reboot
+  when: isDC is changed
+  ansible.windows.win_reboot:
+
+- name: Pause for 10 minutes to ensure reboot is completed
+  when: isDC is changed
+  ansible.builtin.pause:
+    minutes: 10
