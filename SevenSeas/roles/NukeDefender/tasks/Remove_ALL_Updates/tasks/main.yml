@@ -1,9 +1,0 @@
-- name: Remove all updates
-  ansible.windows.win_shell: |
-    Get-WmiObject -query "Select HotFixID from Win32_QuickFixengineering" | sort-object -Descending -Property HotFixID | ForEach-Object{
-      $sUpdate=$_.HotFixID.Replace("KB","")
-      write-host ("Uninstalling update "+$sUpdate)
-      & wusa.exe /uninstall /KB:$sUpdate /quiet /norestart
-      Wait-Process wusa
-      Start-Sleep -s 1 }
-  register: remove_updates
