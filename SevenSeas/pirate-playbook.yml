@@ -15,7 +15,6 @@
   roles:
   - role: NukeDefender
   - role: Remove_All_Updates
-  - role: SetDauntlessHostName
   - role: DomainJoinDauntless
 
 - name: Launching Interceptor...
@@ -24,5 +23,4 @@
   roles:
   - role: NukeDefender
   - role: Remove_All_Updates
-  - role: SetInterceptorHostName
   - role: DomainJoinInterceptor
