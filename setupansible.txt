@@ -1,0 +1,14 @@
+## How to Install Ansible to work with windows (quickly)
+
+# check that pip is installed
+python3 -m pip -V
+# if there is an error here to go documentation to fix
+
+# I use with winrm, install the python winrm
+python3 -m pip install pywinrm
+
+# use pip to install ansible for the current user
+python3 -m pip install --user ansible
+
+# export the ansible installation path to work with current user
+export PATH="/home/$USER/.local/bin:$PATH"
