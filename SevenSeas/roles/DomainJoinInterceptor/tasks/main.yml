@@ -1,0 +1,8 @@
+- name: Docking Interceptor at PortRoyal... (Domain Joining)
+    microsoft.ad.membership
+      dns_domain_name: sevenseas.local
+      hostname: Interceptor
+      domain_admin_user: Administrator@sevenseas.local
+      domain_admin_password: NoPiratesAllowed!
+      state: domain
+      reboot: true
