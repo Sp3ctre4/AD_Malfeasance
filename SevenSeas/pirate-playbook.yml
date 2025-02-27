@@ -1,1 +1,4 @@
 - name: Building PortRoyal...
+  hosts: portroyal
+  gather_facts: true
+  
