@@ -1,0 +1,7 @@
+ad_users:
+  - first_name: James
+    last_name: Norrington
+    username: james.norrington
+    password: forthecrown
+    group: Domain Users
+    description:
