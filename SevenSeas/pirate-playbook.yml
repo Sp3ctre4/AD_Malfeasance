@@ -6,3 +6,19 @@
   - role: Remove_All_Updates
   - role: SetPortRoyalHostName
   - role: UpgradeToDC
+  - role: ConfigureADCS
+  - role: SetTimeZone
+
+- name: Launching Dauntless...
+  hosts: dauntless
+  gather_facts: true
+  roles:
+  - role: NukeDefender
+  - role: Remove_All_Updates
+
+- name: Launching Interceptor...
+  hosts: interceptor
+  gather_facts: true
+  roles:
+  - role: NukeDefender
+  - role: Remove_All_Updates
