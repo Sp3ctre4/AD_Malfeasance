@@ -1,5 +1,5 @@
 - name: Docking Interceptor at PortRoyal... (Domain Joining)
-    microsoft.ad.membership
+  microsoft.ad.membership
       dns_domain_name: sevenseas.local
       hostname: Interceptor
       domain_admin_user: Administrator@sevenseas.local
