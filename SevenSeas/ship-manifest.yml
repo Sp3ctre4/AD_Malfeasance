@@ -1,7 +1,7 @@
 domaincontrollers:
   portroyal:
     hosts:
-      ansible_host: 192.168.0.x.x
+      ansible_host: 192.168.0.x
       ansible_user: Administrator 
       ansible_password: NoPiratesAllowed!
       ansible_connection: winrm
@@ -11,7 +11,7 @@ domaincontrollers:
 workstations:
   dauntless:
     hosts:
-      ansible_host: 192.168.0.x.x
+      ansible_host: 192.168.0.x
       ansible_user: murtogg
       ansible_password: blackpearlfanboyclub
       ansible_connection: winrm
@@ -19,7 +19,7 @@ workstations:
       ansible_port: 5985
   interceptor:
     hosts:
-      ansible_host: 192.168.0.x.x
+      ansible_host: 192.168.0.x
       ansible_user: mullroy
       ansible_password: blackpearlfanboyclub
       ansible_connection: winrm
