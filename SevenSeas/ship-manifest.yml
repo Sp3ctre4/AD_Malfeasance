@@ -1,24 +1,23 @@
-portroyal:
+all:
   hosts:
-    ansible_host: 192.168.0.x
-    ansible_user: Administrator 
-    ansible_password: NoPiratesAllowed!
-    ansible_connection: winrm
-    ansible_winrm_transport: ntlm
-    ansible_port: 5985
-dauntless:
-  hosts:
-    ansible_host: 192.168.0.x
-    ansible_user: murtogg
-    ansible_password: blackpearlfanboyclub
-    ansible_connection: winrm
-    ansible_winrm_transport: ntlm
-    ansible_port: 5985
-interceptor:
-  hosts:
-    ansible_host: 192.168.0.x
-    ansible_user: mullroy
-    ansible_password: blackpearlfanboyclub
-    ansible_connection: winrm
-    ansible_winrm_transport: ntlm
-    ansible_port: 5985
+    portroyal:
+      ansible_host: 192.168.0.x
+      ansible_user: Administrator 
+      ansible_password: NoPiratesAllowed!
+      ansible_connection: winrm
+      ansible_winrm_transport: ntlm
+      ansible_port: 5985
+    dauntless:
+      ansible_host: 192.168.0.x
+      ansible_user: murtogg
+      ansible_password: blackpearlfanboyclub
+      ansible_connection: winrm
+      ansible_winrm_transport: ntlm
+      ansible_port: 5985
+    interceptor:
+      ansible_host: 192.168.0.x
+      ansible_user: mullroy
+      ansible_password: blackpearlfanboyclub
+      ansible_connection: winrm
+      ansible_winrm_transport: ntlm
+      ansible_port: 5985
