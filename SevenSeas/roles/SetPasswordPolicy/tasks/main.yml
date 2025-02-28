@@ -28,7 +28,12 @@
     key: PasswordComplexity
     value: 0
 
-- name: Set Lockout Threshold
+- name: Set Local Lockout Threshold
   win_shell: net accounts /lockoutthreshold:900
+  args:
+    executable: powershell
+
+- name: Set Domain Lockout Threshold
+  win_shell: net accounts /lockoutthreshold:900 /domain
   args:
     executable: powershell
