@@ -112,7 +112,7 @@ ad_users:
     username: rupert.ashford
     password: TheWind@InMySails1782
     group: Domain Users
-    description: Nobody will think to look for my password in here: TheWind@InMySails1782
+    description: Nobody will think to look for my password in here! TheWind@InMySails1782
   - first_name: Frederick
     last_name: Shelton
     username: frederick.shelton
