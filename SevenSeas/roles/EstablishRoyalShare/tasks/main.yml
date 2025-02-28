@@ -20,7 +20,7 @@
   ansible.windows.win_share:
     name: "{{ share_name }}"
     path: "C:\\Share\\{{ share_name }}"
-    description: "Shared Folder"
+    description: "His Majesty's Royal Documents!"
     full: Everyone
     state: present
 
