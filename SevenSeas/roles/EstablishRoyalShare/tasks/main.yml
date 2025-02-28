@@ -1,0 +1,56 @@
+- name: Enable Guest account
+  ansible.windows.win_shell:
+    Enable-LocalUser -Name "Guest"
+
+- name: Create shared folder
+  ansible.windows.win_file:
+    path: "C:\\Share\\{{ share_name }}"
+    state: directory
+
+- name: Set NTFS permissions
+  ansible.windows.win_acl:
+    path: "C:\\Share\\{{ share_name }}"
+    user: Everyone
+    rights: FullControl
+    type: allow
+    state: present
+    inherit: ContainerInherit,ObjectInherit
+
+- name: Create SMB share
+  ansible.windows.win_share:
+    name: "{{ share_name }}"
+    path: "C:\\Share\\{{ share_name }}"
+    description: "Shared Folder"
+    full: Everyone
+    state: present
+
+- name: Allow guest access to share
+  ansible.windows.win_shell: |
+    $acl = Get-Acl "C:\Share\{{ share_name }}"
+    $accessRule = New-Object System.Security.AccessControl.FileSystemAccessRule("GUEST","FullControl","Allow")
+    $acl.SetAccessRule($accessRule)
+    Set-Acl "C:\Share\{{ share_name }}" $acl
+
+- name: Enable Guest account via local security policy
+  ansible.windows.win_shell: |
+    secedit /export /cfg c:\secpol.cfg
+    (gc C:\secpol.cfg).replace("EnableGuestAccount = 0", "EnableGuestAccount = 1") | Out-File C:\secpol.cfg
+    secedit /configure /db c:\windows\security\local.sdb /cfg c:\secpol.cfg /areas SECURITYPOLICY
+    rm -force c:\secpol.cfg -confirm:$false
+
+- name: Allow anonymous access
+  ansible.windows.win_regedit:
+    path: HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters
+    name: RestrictNullSessAccess
+    data: 0
+    type: dword
+
+- name: Copy Urgent.txt
+  ansible.windows.win_copy:
+    src: files/Urgent.txt
+    dest: "C:\\share\\{{share_name}}\\"
+
+- name: Copy PasswordComplexity.txt
+  ansible.windows.win_copy:
+    src: files/PasswordComplexity.txt
+    dest: "C:\\share\\{{share_name}}\\"
