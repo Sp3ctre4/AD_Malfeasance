@@ -9,6 +9,7 @@
   - role: ConfigureADCS
   - role: SetTimeZone
   - role: EstablishRoyalShare
+  - role: SetPasswordPolicy
 
 - name: Launching Dauntless...
   hosts: dauntless
