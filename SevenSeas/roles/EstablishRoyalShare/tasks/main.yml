@@ -138,7 +138,7 @@
 # into Naval Operations
 - name: Copy correspondence letter
   ansible.windows.win_copy:
-    src: "files/Correspondence Letter.txt
+    src: "files/Correspondence Letter.txt"
     dest: "C:\\share\\{{share_name}}\\Naval Operations\\Admirality\\"
 - name: Copy orders and decrees
   ansible.windows.win_copy:
@@ -160,7 +160,7 @@
 # into Merchant Shipping Services
 - name: Copy cargo shipments
   ansible.windows.win_copy:
-    src: "files/Cargo Shipments.txt
+    src: "files/Cargo Shipments.txt"
     dest: "C:\\share\\{{share_name}}\\Merchant Shipping Services\\British Merchant Ships\\"
 - name: Copy crew manifesto
   ansible.windows.win_copy:
@@ -168,7 +168,7 @@
     dest: "C:\\share\\{{share_name}}\\Merchant Shipping Services\\British Merchant Ships\\"
 - name: Copy spice manifest
   ansible.windows.win_copy:
-    src: "files/Spice Manifest.xlsx
+    src: "files/Spice Manifest.xlsx"
     dest: "C:\\share\\{{share_name}}\\Merchant Shipping Services\\Cargo\\"
 - name: Copy merchant captains
   ansible.windows.win_copy:
@@ -192,7 +192,7 @@
 # into Pirates and Smuggling Activities
 - name: Copy pirate raids
   ansible.windows.win_copy:
-    src: "files/Pirate Raids.txt
+    src: "files/Pirate Raids.txt"
     dest: "C:\\share\\{{share_name}}\\Pirates and Smuggling Activities\\Pirate Activities\\"
 - name: Copy **bribery report**
   ansible.windows.win_copy:
