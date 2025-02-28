@@ -1,0 +1,10 @@
+- name: Kerberoast Sailor
+  microsoft.ad.user:
+    identity: "{{ user_name }}"
+    spn:
+      set:
+        - "HTTP/{{ user_name }}:1433"
+  register: user_result
+  until: user_result is not failed
+  retries: 5
+  delay: 15
