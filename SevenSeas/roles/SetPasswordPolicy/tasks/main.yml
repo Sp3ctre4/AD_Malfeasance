@@ -1,4 +1,3 @@
----
 - name: Set Minimum Password Length to 3 characters
   win_security_policy:
     section: System Access
@@ -28,3 +27,8 @@
     section: System Access
     key: PasswordComplexity
     value: 0
+
+- name: Set Lockout Threshold
+  win_shell: net accounts /lockoutthreshold:900
+  args:
+    executable: powershell
