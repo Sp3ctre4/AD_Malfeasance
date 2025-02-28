@@ -14,6 +14,8 @@
   - role: KerberoastSailor
   - role: LLMNRPoisoning
   - role: ASREPRoast
+  - role: AnonymousLDAPBind #
+  - role: EnableRDP #
 
 - name: Launching Dauntless...
   hosts: dauntless
@@ -22,6 +24,9 @@
   - role: NukeDefender
   - role: Remove_All_Updates
   - role: DomainJoinDauntless
+  - role: PromoteMurtogg #
+  - role: TokenImpersonation #
+  - role: EnableRDP #
 
 - name: Launching Interceptor...
   hosts: interceptor
@@ -30,3 +35,5 @@
   - role: NukeDefender
   - role: Remove_All_Updates
   - role: DomainJoinInterceptor
+  - role: PromoteMullroy
+  - role: EnableRDP
