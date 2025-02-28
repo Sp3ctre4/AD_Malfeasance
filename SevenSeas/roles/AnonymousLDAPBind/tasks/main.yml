@@ -1,0 +1,61 @@
+- name: Enable anonymous LDAP operations
+  ansible.windows.win_shell: |
+    $dsHeuristics = (Get-ADObject 'CN=Directory Service,CN=Windows NT,CN=Services,CN=Configuration,DC=sevenseas,DC=local' -Properties dsHeuristics).dsHeuristics
+    if ($dsHeuristics) {
+      $newDsHeuristics = $dsHeuristics.Substring(0,6) + '2' + $dsHeuristics.Substring(7)
+      Set-ADObject 'CN=Directory Service,CN=Windows NT,CN=Services,CN=Configuration,DC=sevenseas,DC=local' -Replace @{dsHeuristics=$newDsHeuristics}
+    } else {
+      Set-ADObject 'CN=Directory Service,CN=Windows NT,CN=Services,CN=Configuration,DC=sevenseas,DC=local' -Replace @{dsHeuristics='0000002'}
+    }
+
+- name: Give ANONYMOUS LOGON access to CN=Users
+  ansible.windows.win_shell: |
+    # Load the required .NET assembly
+    Add-Type -AssemblyName System.DirectoryServices
+
+    # Get the "CN=Users" container object
+    $UsersContainer = [ADSI]"LDAP://CN=Users,DC=sevenseas,DC=local"
+
+    # Get the security descriptor for the "CN=Users" container
+    $Acl = $UsersContainer.psbase.ObjectSecurity
+
+    # Create a new access rule for the "ANONYMOUS LOGON" user
+    $AnonymousLogon = New-Object System.Security.Principal.NTAccount("ANONYMOUS LOGON")
+    $Rights = [System.DirectoryServices.ActiveDirectoryRights]::GenericRead -bor [System.DirectoryServices.ActiveDirectoryRights]::ListContents
+    $Ace = New-Object System.DirectoryServices.ActiveDirectoryAccessRule(
+        $AnonymousLogon,
+        $Rights,
+        [System.Security.AccessControl.AccessControlType]::Allow,
+        [System.DirectoryServices.ActiveDirectorySecurityInheritance]::All
+    )
+
+    # Add the new access rule to the ACL
+    $Acl.AddAccessRule($Ace)
+
+    # Set the updated ACL on the "CN=Users" container
+    $UsersContainer.psbase.ObjectSecurity = $Acl
+    $UsersContainer.psbase.CommitChanges()
+
+    # Function to recursively apply ACL to child objects
+    function Set-RecursiveAcl {
+        param (
+            [Parameter(Mandatory=$true)]
+            [System.DirectoryServices.DirectoryEntry]$Object,
+            [Parameter(Mandatory=$true)]
+            [System.DirectoryServices.ActiveDirectorySecurity]$Acl
+        )
+
+        try {
+            $Object.psbase.ObjectSecurity = $Acl
+            $Object.psbase.CommitChanges()
+
+            foreach ($child in $Object.psbase.Children) {
+                Set-RecursiveAcl -Object $child -Acl $Acl
+            }
+        } catch {
+            Write-Error "Failed to set ACL on object: $($_.Exception.Message)"
+        }
+    }
+
+    # Apply the ACL recursively to all child objects
+    Set-RecursiveAcl -Object $UsersContainer -Acl $Acl

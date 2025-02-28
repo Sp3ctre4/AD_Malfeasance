@@ -1,0 +1,4 @@
+- name: Promote Mullroy to Dauntless local admin
+  win_shell: net localgroup Administrators murtogg.smith /add /domain
+  args:
+    executable: powershell

@@ -1,0 +1,4 @@
+- name: Promote Mullroy to Interceptor local admin
+  win_shell: net localgroup Administrators mullroy.smith /add /domain
+  args:
+    executable: powershell
