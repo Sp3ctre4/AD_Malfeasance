@@ -28,9 +28,3 @@
     section: System Access
     key: PasswordComplexity
     value: 0
-
-- name: Set Account Lockout Threshold
-  win_security_policy:
-    section: System Access
-    key: AccountLockoutThreshold
-    value: 900
