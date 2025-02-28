@@ -16,3 +16,4 @@ This current iteration takes one Windows Server 2019 and two Windows 10 workstat
  - Find a way to add the Navy Rankings in Ansible
  - change the AddDomainUsers role to incorporate those rankings
  - add even more stuff to the smb share which is already ginarmous
+ - find a way to add domain user with no password
