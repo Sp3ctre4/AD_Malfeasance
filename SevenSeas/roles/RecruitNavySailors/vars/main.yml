@@ -74,7 +74,7 @@ ad_users:
   - first_name: George
     last_name: Lupin
     username: george.lupin
-    password: 
+    password: ""
     group: Domain Users
     description: "I'm too lazy for a password…"
   - first_name: Oliver
