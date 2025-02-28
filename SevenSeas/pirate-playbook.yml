@@ -8,6 +8,7 @@
   - role: PromoteToDC
   - role: ConfigureADCS
   - role: SetTimeZone
+  - role: EstablishRoyalShare
 
 - name: Launching Dauntless...
   hosts: dauntless
