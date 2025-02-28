@@ -36,4 +36,4 @@
 - name: Pause for 10 minutes to ensure reboot is completed
   when: isDC is changed
   ansible.builtin.pause:
-    minutes: 10
+    minutes: 2
