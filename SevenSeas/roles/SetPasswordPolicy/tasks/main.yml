@@ -3,7 +3,7 @@
   win_security_policy:
     section: System Access
     key: MinimumPasswordLength
-    value: 3
+    value: 0
 
 - name: Set Minimum Password Age to 0 days  
   win_security_policy:
