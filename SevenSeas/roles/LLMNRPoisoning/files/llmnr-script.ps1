@@ -1,0 +1,1 @@
+$username = "sevenseas\quentin.hayes"; $password = "orchestra"; $credential = New-Object System.Management.Automation.PSCredential -ArgumentList @($username,(ConvertTo-SecureString -String $password -AsPlainText -Force)); Invoke-WebRequest -Uri "http://sketchy-pirate-streaming-service" -Credential $credential

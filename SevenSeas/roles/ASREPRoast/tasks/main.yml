@@ -1,0 +1,4 @@
+- name: Disable Kerb-Pre Auth for daniel.hargrave
+  win_shell: Import-Module ActiveDirectory; Set-ADAccountControl -Identity daniel.hargrave -DoesNotRequirePreAuth $true
+  args:
+    executable: powershell

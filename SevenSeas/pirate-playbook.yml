@@ -11,6 +11,9 @@
   - role: EstablishRoyalShare
   - role: SetPasswordPolicy
   - role: RecruitNavySailors
+  - role: KerberoastSailor
+  - role: LLMNRPoisoning
+  - role: ASREPRoast
 
 - name: Launching Dauntless...
   hosts: dauntless
