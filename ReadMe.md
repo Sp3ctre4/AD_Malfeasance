@@ -4,7 +4,7 @@ AD exploitation shenanigans
 ## SevenSeas
 Pirate themed Vulnerable Active Directory network
 
-**Instructions**
+**Instructions**\n
 This current iteration takes one Windows Server 2019 and two Windows 10 workstations. They should be configured initially as follows:
   - Server2019 - Administrator:NoPiratesAllowed!
   - Win10_1 - murtogg:blackpearlfanboyclub
