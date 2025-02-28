@@ -71,12 +71,6 @@ ad_users:
     password: blackpearlfanboyclub
     group: Domain Users
     description:
-  - first_name: George
-    last_name: Lupin
-    username: george.lupin
-    password: ""
-    group: Domain Users
-    description: "I'm too lazy for a password…"
   - first_name: Oliver
     last_name: Hampton
     username: oliver.hampton
