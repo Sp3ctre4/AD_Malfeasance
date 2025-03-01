@@ -21,3 +21,17 @@ all:
       ansible_connection: winrm
       ansible_winrm_transport: ntlm
       ansible_port: 5985
+    admin-dauntless:
+      ansible_host: 192.168.0.x
+      ansible_user: Administrator 
+      ansible_password: NoPiratesAllowed!
+      ansible_connection: winrm
+      ansible_winrm_transport: ntlm
+      ansible_port: 5985
+    admin-interceptor:
+      ansible_host: 192.168.0.x
+      ansible_user: Administrator 
+      ansible_password: NoPiratesAllowed!
+      ansible_connection: winrm
+      ansible_winrm_transport: ntlm
+      ansible_port: 5985

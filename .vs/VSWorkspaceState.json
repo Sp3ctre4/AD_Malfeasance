@@ -1,7 +1,16 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\SevenSeas",
+    "\\SevenSeas\\roles",
+    "\\SevenSeas\\roles\\DomainJoinInterceptor",
+    "\\SevenSeas\\roles\\EnableRDP",
+    "\\SevenSeas\\roles\\EstablishRoyalShare",
+    "\\SevenSeas\\roles\\PromoteMullroy",
+    "\\SevenSeas\\roles\\PromoteMullroy\\tasks",
+    "\\SevenSeas\\roles\\PromoteMurtogg",
+    "\\SevenSeas\\roles\\PromoteMurtogg\\tasks"
   ],
-  "SelectedNode": "\\C:\\Users\\parke\\Source\\Repos\\AD_Malfeasance",
+  "SelectedNode": "\\SevenSeas\\ship-manifest.yml",
   "PreviewInSolutionExplorer": false
 }

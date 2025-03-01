@@ -24,6 +24,11 @@
   - role: NukeDefender
   - role: Remove_All_Updates
   - role: DomainJoinDauntless
+  
+- name: Promoting Murtogg on Dauntless
+  hosts: admin-dauntless
+  gather_facts: true
+  roles:
   - role: PromoteMurtogg
   - role: TokenImpersonation
   - role: EnableRDP
@@ -35,5 +40,10 @@
   - role: NukeDefender
   - role: Remove_All_Updates
   - role: DomainJoinInterceptor
+
+- name: Promoting Mullroy on Interceptor
+  hosts: admin-interceptor
+  gather_facts: true
+  roles:
   - role: PromoteMullroy
-  - role: EnableRDP
+  - role: EnableRDP  
