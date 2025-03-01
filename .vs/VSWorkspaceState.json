@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\SevenSeas",
+    "\\SevenSeas\\roles",
+    "\\SevenSeas\\roles\\PromoteMullroy",
+    "\\SevenSeas\\roles\\PromoteMullroy\\tasks",
+    "\\SevenSeas\\roles\\PromoteMurtogg",
+    "\\SevenSeas\\roles\\PromoteMurtogg\\tasks"
+  ],
+  "SelectedNode": "\\SevenSeas\\roles\\PromoteMurtogg\\tasks\\main.yml",
+  "PreviewInSolutionExplorer": false
+}

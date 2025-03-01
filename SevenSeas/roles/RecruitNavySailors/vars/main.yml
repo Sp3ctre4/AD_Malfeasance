@@ -3,155 +3,155 @@ ad_users:
     last_name: Norrington
     username: james.norrington
     password: iloveelizabeth
-    group: Domain Admins
+    group: Admirals
     description:
   - first_name: Edward
     last_name: Cross
     username: edward.cross
     password: SeaDog#Captain@42
-    group: Domain Users
+    group: Captains
     description:
   - first_name: Elias
     last_name: Thorne
     username: elias.thorne
     password: IReallyDon’tLikePirates!
-    group: Domain Users
+    group: Captains
     description: For The King!
   - first_name: Amelia
     last_name: Doppler
     username: amelia.doppler
     password: swordfish!
-    group: Domain Users
+    group: Captains
     description:
   - first_name: Archer
     last_name: Brown
     username: archer.brown
     password: captainhook
-    group: Domain Users
+    group: Captains
     description:
   - first_name: Samuel
     last_name: Blackwood
     username: samuel.blackwood
     password: kiwitheparrot
-    group: Domain Users
+    group: Lieutenants
     description:
   - first_name: Jonathon
     last_name: Lockheart
     username: jonathon.lockheart
     password: Cutlass$andGold!42
-    group: Domain Users
+    group: Lieutenants
     description:
   - first_name: Daniel
     last_name: Hargrave
     username: daniel.hargrave
     password: Marooned!OnIsland#23
-    group: Domain Users
+    group: Lieutenants
     description:
   - first_name: William
     last_name: Marlowe
     username: william.marlowe
     password: eyepatch
-    group: Domain Users
+    group: Lieutenants
     description:
   - first_name: Reginald
     last_name: Biggleton
     username: reginald.biggleton
     password: cannonball
-    group: Domain Users
+    group: Lieutenants
     description:
   - first_name: Murtogg
     last_name: Smith
     username: murtogg.smith
     password: blackpearlfanboyclub
-    group: Domain Users
+    group: Petty Officers
     description:
   - first_name: Mullroy
     last_name: Smith
     username: mullroy.smith
     password: blackpearlfanboyclub
-    group: Domain Users
+    group: Petty Officers
     description:
   - first_name: Oliver
     last_name: Hampton
     username: oliver.hampton
     password: NavalBattle!B4#TheCrown
-    group: Domain Users
+    group: Deckhands
     description:
   - first_name: Geoffrey
     last_name: Reed
     username: geoffrey.reed
     password: Grog4TheCrew#123
-    group: Domain Users
+    group: Deckhands
     description:
   - first_name: Francis
     last_name: Harland
     username: francis.harland
     password: francis123
-    group: Domain Users
+    group: Deckhands
     description:
   - first_name: Edmund
     last_name: Radcliffe
     username: edmund.radcliffe
     password: Swashbuckl3r!X!
-    group: Domain Users
+    group: Deckhands
     description:
   - first_name: Richard
     last_name: Graves
     username: richard.graves
     password: Sailing@PortRoyal1812
-    group: Domain Users
+    group: Deckhands
     description:
   - first_name: Rupert
     last_name: Ashford
     username: rupert.ashford
     password: TheWind@InMySails1782
-    group: Domain Users
+    group: Deckhands
     description: Nobody will think to look for my password in here! TheWind@InMySails1782
   - first_name: Frederick
     last_name: Shelton
     username: frederick.shelton
     password: DavyJones!Locker@1779
-    group: Domain Users
+    group: Deckhands
     description:
   - first_name: Nathaniel
     last_name: Crow
     username: nathaniel.crow
     password: adventurer
-    group: Domain Users
+    group: Deckhands
     description:
   - first_name: Horatio
     last_name: Fitzgerald
     username: horatio.fitzgerald
     password: ilovebooks
-    group: Domain Users
-    description: "I've always dreamed of writing a book one day."
+    group: Deckhands
+    description: Ive always dreamed of writing a book one day.
   - first_name: Henry
     last_name: Pritchard
     username: henry.pritchard
     password: FlagShip!RoyalNavy$#1795
-    group: Domain Users
+    group: Deckhands
     description:
   - first_name: Arthur
     last_name: Forsythe
     username: arthur.forsythe
     password: CannonFire@HighSeas!
-    group: Domain Users
+    group: Deckhands
     description:
   - first_name: Quentin
     last_name: Hayes
     username: quentin.hayes
     password: orchestra
-    group: Domain Users
+    group: Deckhands
     description:
   - first_name: Andrew
     last_name: Calloway
     username: andrew.calloway
     password: portside1
-    group: Domain Users
+    group: Deckhands
     description:
   - first_name: Thomas
     last_name: Wentworth
     username: thomas.wentworth
     password: starboard1
-    group: Domain Users
+    group: Deckhands
     description:

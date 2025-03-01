@@ -1,0 +1,6 @@
+navy_ranks:
+  - rank_name: Admirals
+  - rank_name: Captains
+  - rank_name: Lieutenants
+  - rank_name: Petty Officers
+  - rank_name: Deckhands  

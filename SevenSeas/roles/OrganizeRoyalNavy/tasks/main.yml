@@ -1,0 +1,12 @@
+- name: Adding HisRoyalNavy Organizational Unit
+  microsoft.ad.ou:
+    name: HisRoyalNavy
+    path: DC=sevenseas,DC=local
+    state: present
+
+- name: Adding Navy Ranks
+  microsoft.ad.group:
+    name: "{{ item.rank_name }}"
+    path: OU=HisRoyalNavy,DC=sevenseas,DC=local
+    state: present
+  loop: "{{ navy_ranks }}"

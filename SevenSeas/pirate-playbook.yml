@@ -10,6 +10,7 @@
   - role: SetTimeZone
   - role: EstablishRoyalShare
   - role: SetPasswordPolicy
+  - role: OrganizeRoyalNavy
   - role: RecruitNavySailors
   - role: KerberoastSailor
   - role: LLMNRPoisoning
