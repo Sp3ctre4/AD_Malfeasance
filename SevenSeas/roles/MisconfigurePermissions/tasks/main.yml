@@ -1,0 +1,22 @@
+# Give Impersonation privileges to reginald.biggleton
+- name: Give Impersonation privs to reginald.biggleton
+  ansible.windows.win_user_right:
+    name: SeImpersonatePrivilege
+    users: 
+     - sevenseas.local\reginald.biggleton
+    action: set
+
+# Give ForceChangePassword privs to Amelia over Admirals
+- name: Grant Amelia.Doppler ForceChangePassword
+  ansible.windows.win_shell: |
+    $Srcobj = (Get-ADUser -Identity "amelia.doppler").sid
+    $Dstobj = (Get-ADGroup -Identity "Admirals").DistinguishedName
+    $right = "GenericAll"
+
+    $ADObject = [ADSI]("LDAP://" + $Dstobj)
+    $adRights = [System.DirectoryServices.ActiveDirectoryRights]$right
+    $type = [System.Security.AccessControl.AccessControlType] "Allow"
+    $inheritanceType = [System.DirectoryServices.ActiveDirectorySecurityInheritance] "All"
+    $ACE = New-Object System.DirectoryServices.ActiveDirectoryAccessRule $Srcobj,$adRights,$type,$inheritanceType
+    $ADObject.psbase.ObjectSecurity.AddAccessRule($ACE)
+    $ADObject.psbase.commitchanges()

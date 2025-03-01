@@ -17,6 +17,7 @@
   - role: ASREPRoast
   - role: AnonymousLDAPBind
   - role: EnableRDP
+  - role: MisconfigurePermissions
 
 - name: Launching Dauntless...
   hosts: dauntless

@@ -14,18 +14,14 @@
 - name: Admiralize James Norrington
   microsoft.ad.group:
     name: Domain Admins
-    scope: domainlocal
+    scope: global
     members:
       add:
         - Admirals
 
-#- name: Add Passwordless User
-#  win_shell: net user "benjamin.clarke" /passwordreq:no /add /domain /comment:"Im too lazy for a password..." /expires:never /fullname:"Benjamin Clarke"
-#  args:
-#    executable: powershell
-
 - name: Add passwordless user benjamin.clarke
   ansible.windows.win_user:
+    fullname: "Benjamin Clarke"
     name: benjamin.clarke
     password: 
     password_never_expires: true
