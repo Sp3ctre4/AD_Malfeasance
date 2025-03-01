@@ -1,4 +1,6 @@
-- name: Promote Mullroy to Dauntless local admin
-  win_shell: net localgroup Administrators murtogg.smith /add /domain
-  args:
-    executable: powershell
+- name: Promote Murtogg to Dauntless local admin
+  ansible.windows.win_group_membership:
+    name: Administrators
+    members:
+      - SEVENSEAS\murtogg.smith
+    state: present
