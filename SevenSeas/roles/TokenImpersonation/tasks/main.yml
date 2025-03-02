@@ -1,6 +1,6 @@
 - name: (dauntless admin impersonation) Register script to run on boot using Task Scheduler
   community.windows.win_scheduled_task:
-    name: token
+    name: Impersonation
     description: "Do not delete"
     actions:
       - path: C:\Windows\System32\calc.exe
@@ -21,3 +21,6 @@
     restart_interval: P0Y0M0DT0H1M0S
     start_when_available: true
     allow_demand_start: true
+
+- name: Restart Dauntless to launch impersonation script
+  ansible.windows.win_reboot:
