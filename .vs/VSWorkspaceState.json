@@ -3,11 +3,9 @@
     "",
     "\\SevenSeas",
     "\\SevenSeas\\roles",
-    "\\SevenSeas\\roles\\PromoteMullroy",
-    "\\SevenSeas\\roles\\PromoteMullroy\\tasks",
-    "\\SevenSeas\\roles\\PromoteMurtogg",
-    "\\SevenSeas\\roles\\PromoteMurtogg\\tasks"
+    "\\SevenSeas\\roles\\AnonymousLDAPBind",
+    "\\SevenSeas\\roles\\AnonymousLDAPBind\\tasks"
   ],
-  "SelectedNode": "\\SevenSeas\\roles\\PromoteMurtogg\\tasks\\main.yml",
+  "SelectedNode": "\\SevenSeas\\roles\\AnonymousLDAPBind\\tasks\\main.yml",
   "PreviewInSolutionExplorer": false
 }
