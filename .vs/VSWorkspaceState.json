@@ -3,14 +3,11 @@
     "",
     "\\SevenSeas",
     "\\SevenSeas\\roles",
-    "\\SevenSeas\\roles\\AnonymousLDAPBind",
-    "\\SevenSeas\\roles\\AnonymousLDAPBind\\tasks",
-    "\\SevenSeas\\roles\\MisconfigurePermissions",
-    "\\SevenSeas\\roles\\MisconfigurePermissions\\tasks",
-    "\\SevenSeas\\roles\\TokenImpersonation",
-    "\\SevenSeas\\roles\\TokenImpersonation\\tasks",
-    "\\SevenSeas\\roles\\TokenImpersonation\\vars"
+    "\\SevenSeas\\roles\\PromoteToDC",
+    "\\SevenSeas\\roles\\PromoteToDC\\tasks",
+    "\\SevenSeas\\roles\\QueenizeAmelia\\tasks",
+    "\\SevenSeas\\roles\\TokenImpersonation\\tasks"
   ],
-  "SelectedNode": "\\SevenSeas\\roles\\MisconfigurePermissions\\tasks\\main.yml",
+  "SelectedNode": "\\SevenSeas\\roles\\PromoteToDC\\tasks\\main.yml",
   "PreviewInSolutionExplorer": false
 }

@@ -33,7 +33,7 @@
   when: isDC is changed
   ansible.windows.win_reboot:
 
-- name: Pause for 10 minutes to ensure reboot is completed
+- name: Pause for 2 minutes to ensure reboot is completed
   when: isDC is changed
   ansible.builtin.pause:
     minutes: 2
