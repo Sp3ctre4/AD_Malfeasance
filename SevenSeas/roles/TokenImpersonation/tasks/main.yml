@@ -22,5 +22,13 @@
     start_when_available: true
     allow_demand_start: true
 
+# Give Impersonation privileges to reginald.biggleton
+- name: Give Impersonation privs to reginald.biggleton
+  ansible.windows.win_user_right:
+    name: SeImpersonatePrivilege
+    users: 
+     - sevenseas.local\reginald.biggleton
+    action: add
+
 - name: Restart Dauntless to launch impersonation script
   ansible.windows.win_reboot:
