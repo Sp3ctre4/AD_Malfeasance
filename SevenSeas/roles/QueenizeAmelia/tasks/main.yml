@@ -5,4 +5,4 @@
     dest: C:\Windows\Temp\setacl.ps1
 
 - name: Running setacl script on PortRoyal
-  ansible.windows.win_shell: C:\Windows\Temp\setacl.ps1
+  ansible.windows.win_command: C:\Windows\Temp\setacl.ps1
