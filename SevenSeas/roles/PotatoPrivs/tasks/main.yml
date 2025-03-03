@@ -1,0 +1,7 @@
+# Give Impersonation privileges to reginald.biggleton
+- name: Give Impersonation privs to reginald.biggleton
+  ansible.windows.win_user_right:
+    name: SeImpersonatePrivilege
+    users: 
+     - sevenseas.local\reginald.biggleton
+    action: add

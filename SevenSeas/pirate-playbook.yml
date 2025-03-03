@@ -33,7 +33,8 @@
   roles:
   - role: PromoteMurtogg
   - role: EnableRDP
-  - role: TokenImpersonation
+  - role: PotatoPrivs
+  - role: RebootComputer
 
 - name: Launching Interceptor...
   hosts: interceptor
